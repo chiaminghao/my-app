@@ -10,6 +10,7 @@ function App() {
       <Button variant="contained" color="secondary">
         Primary
       </Button>
+      <div>HELLO WORLD</div>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
