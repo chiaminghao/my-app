@@ -4,7 +4,6 @@ function Login() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [data, setData] = useState([])
-  const [showData, setShowData] = useState(false)
 
   const getData = async () => {
     const result = await fetch(
@@ -13,7 +12,6 @@ function Login() {
     const res = await result.json()
     console.log(res)
     setData(res)
-    setShowData(true)
   }
 
   const clearData = () => {
@@ -63,7 +61,6 @@ function Login() {
         </button>
         <br />
         {
-          showData &&
           data.map((item, index) => {
             return <ul key={index}>{item.repo.name}</ul>
           })
